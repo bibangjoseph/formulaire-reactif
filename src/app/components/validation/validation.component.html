@@ -1,0 +1,30 @@
+
+
+@if(control && control.invalid && (control.dirty || control.touched)) {
+    <div  class="common-error-display">
+        @if (error && showError) {
+            <div class="text-danger">
+                @if (error.required) {
+                    <p class="mt-1">Champ requis</p>
+                }
+                @if (error.email) {
+                    <p class="mt-1">Renseignez une adresse e-mail valide</p>
+                }
+                @if (error.minlength) {
+                    <p class="mt-1">{{error.minlength.requiredLength}} caractères minimum</p>
+                }
+                @if (error.maxlength) {
+                    <p class="mt-1">{{error.maxlength.requiredLength}} caractères maximum</p>
+                }
+                @if (error.min) {
+                    <p class="mt-1">La valeur minimale autorisée est {{error.min.min}}</p>
+                }
+                @if (error.max) {
+                    <p class="mt-1">La valeur maximale autorisée est {{error.max.max}}</p>
+                }
+                <!-- Ajoutez d'autres erreurs personnalisées au besoin -->
+            </div>
+        }
+    </div>
+}
+
