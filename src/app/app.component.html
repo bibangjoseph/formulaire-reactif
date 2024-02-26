@@ -6,8 +6,8 @@
     </div>
     <form [formGroup]="form">
         <div class="row">
-            <div class="col-4">
-                <div class="mb-2">
+            <div class="col-6">
+                <div class="mb-3">
                     <label>Nom(s) & Prénom(s) : </label>
                     <input type="text" class="form-control" formControlName="nom">
                     <app-validation
@@ -17,8 +17,8 @@
                     </app-validation>
                 </div>
             </div>
-            <div class="col-4">
-                <div class="mb-2">
+            <div class="col-6">
+                <div class="mb-3">
                     <label>Email :</label>
                     <input type="email" class="form-control" formControlName="email">
                     <app-validation
@@ -28,8 +28,8 @@
                     </app-validation>
                 </div>
             </div>
-            <div class="col-4">
-                <div class="mb-2">
+            <div class="col-6">
+                <div class="mb-3">
                     <label>Téléphone : </label>
                     <input type="text" class="form-control" formControlName="telephone">
                     <app-validation
@@ -39,8 +39,8 @@
                     </app-validation>
                 </div>
             </div>
-            <div class="col-4">
-                <div class="mb-2">
+            <div class="col-6">
+                <div class="mb-3">
                     <label>Montant Max : </label>
                     <input type="text" class="form-control" formControlName="max_amount">
                     <app-validation
@@ -50,20 +50,9 @@
                     </app-validation>
                 </div>
             </div>
-            <div class="col-4">
-                <div class="mb-2">
-                    <label>Montant Min : </label>
-                    <input type="text" class="form-control" formControlName="min_amount">
-                    <app-validation
-                        [error]="form.get('min_amount')?.errors"
-                        [showError]="true"
-                        [control]="form.get('min_amount')">
-                    </app-validation>
-                </div>
-            </div>
         </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-6">
                 <button class="btn btn-primary" type="submit" [disabled]="!form.valid" >Sauvegarder</button>
             </div>
         </div>

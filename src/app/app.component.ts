@@ -19,11 +19,10 @@ export class AppComponent {
 
   ngOnInit(): void {
       this.form = this.formBuilder.group({
-          nom: ['', Validators.required],
-          email: ['', Validators.required, Validators.email],
-          telephone: ['', Validators.required, Validators.maxLength(9)],
-          max_amount: ['', Validators.required, Validators.max(100000)],
-          min_amount: ['', Validators.required, Validators.min(10000)],
+          nom: ['', [Validators.required]],
+          email: ['',[Validators.required, Validators.email]],
+          telephone: ['', [Validators.required, Validators.maxLength(9)]],
+          max_amount: ['', [Validators.required, Validators.max(100000)]],
       })
   }
 }

@@ -13,4 +13,8 @@ export class ValidationComponent {
   @Input('error') error: any;
   @Input('showError') showError!: boolean;
   @Input('control') control: any;
+
+  ngOnInit(): void {
+      console.log(this.error)
+  }
 }
